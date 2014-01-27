@@ -1,2 +1,26 @@
-@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+@import url('http://fonts.googleapis.com/css?family=Roboto:400,100,300');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+$font-primary: 'Roboto', sans-serif;
+
+p,a, li, #{headings()}    {
+	font-family: $font-primary;
+	font-size: 1.2rem;
+	color: $gray;
+}
+
+h1 { 																font-size: 2.5rem; 
+	@include at-breakpoint($small)  {	font-size: 3.2rem; }
+	@include at-breakpoint($medium) {	font-size: 4rem; }
+}
+
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.8rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1.2rem; }
+
+a { text-decoration: none;}
+
+header, footer {clear: both;}
+

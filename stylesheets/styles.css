@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400");
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,100,300");
 @import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 /* line 17, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -69,6 +69,65 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* line 6, ../sass/_base.scss */
+p, a, li, h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: #534a44;
+}
+
+/* line 12, ../sass/_base.scss */
+h1 {
+  font-size: 2.5rem;
+}
+@media (min-width: 30em) {
+  /* line 12, ../sass/_base.scss */
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+@media (min-width: 47em) {
+  /* line 12, ../sass/_base.scss */
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+/* line 17, ../sass/_base.scss */
+h2 {
+  font-size: 2.5rem;
+}
+
+/* line 18, ../sass/_base.scss */
+h3 {
+  font-size: 2rem;
+}
+
+/* line 19, ../sass/_base.scss */
+h4 {
+  font-size: 1.8rem;
+}
+
+/* line 20, ../sass/_base.scss */
+h5 {
+  font-size: 1.5rem;
+}
+
+/* line 21, ../sass/_base.scss */
+h6 {
+  font-size: 1.2rem;
+}
+
+/* line 23, ../sass/_base.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 25, ../sass/_base.scss */
+header, footer {
+  clear: both;
+}
+
 /* line 14, C:/Ruby200/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
 * {
   -webkit-box-sizing: border-box;
@@ -77,6 +136,169 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 13, ../sass/_layout.scss */
-h1 {
-  color: gray;
+header {
+  width: 100%;
+}
+/* line 16, ../sass/_layout.scss */
+header .header-container {
+  padding: 0;
+}
+/* line 19, ../sass/_layout.scss */
+header .header-container .branding {
+  overflow: hidden;
+  *zoom: 1;
+  *zoom: 1;
+  max-width: 61em;
+  _width: 61em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  height: 50px;
+  padding: auto 2.5%;
+}
+/* line 38, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+header .header-container .branding:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 27, ../sass/_layout.scss */
+header .header-container .branding i {
+  display: block;
+  line-height: 50px;
+  float: left;
+  font-size: 2.5rem;
+  color: #e95a3e;
+}
+/* line 35, ../sass/_layout.scss */
+header .header-container .branding h3 {
+  display: inline-block;
+  line-height: 50px;
+  vertical-align: middle;
+  color: #4181a1;
+  margin-left: 20px;
+}
+/* line 41, ../sass/_layout.scss */
+header .header-container .branding h3 span {
+  color: #534a44;
+}
+/* line 45, ../sass/_layout.scss */
+header .header-container .navbar {
+  width: 100%;
+  background-color: #4181a1;
+}
+/* line 50, ../sass/_layout.scss */
+header .header-container .navbar .navbar-box ul li {
+  padding: 10px 5%;
+  border-bottom: 1px solid #599bbc;
+  vertical-align: middle;
+}
+/* line 54, ../sass/_layout.scss */
+header .header-container .navbar .navbar-box ul li a {
+  color: #f7efe7;
+}
+@media (min-width: 30em) {
+  /* line 71, ../sass/_layout.scss */
+  header .header-container .navbar .navbar-box {
+    max-width: 31em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+  /* line 38, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  header .header-container .navbar .navbar-box:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* line 75, ../sass/_layout.scss */
+  header .header-container .navbar .navbar-box ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+  }
+  /* line 60, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  header .header-container .navbar .navbar-box ul li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+    white-space: nowrap;
+    display: inline;
+    float: left;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  /* line 48, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  header .header-container .navbar .navbar-box ul li:first-child, header .header-container .navbar .navbar-box ul li.first {
+    padding-left: 0;
+  }
+  /* line 49, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  header .header-container .navbar .navbar-box ul li:last-child {
+    padding-right: 0;
+  }
+  /* line 50, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  header .header-container .navbar .navbar-box ul li.last {
+    padding-right: 0;
+  }
+  /* line 78, ../sass/_layout.scss */
+  header .header-container .navbar .navbar-box ul li {
+    padding: 10px 20px;
+    border-bottom: none;
+  }
+}
+
+/* line 92, ../sass/_layout.scss */
+.jumbo {
+  display: block;
+  width: 100%;
+  height: 350px;
+  background: url('../images/countryside.jpg?1390666344');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0 auto;
+}
+/* line 106, ../sass/_layout.scss */
+.jumbo .jumbo-marketing {
+  padding: 30px 5%;
+}
+/* line 108, ../sass/_layout.scss */
+.jumbo .jumbo-marketing h1 {
+  color: white;
+  font-weight: 200;
+  line-height: 1.2;
+}
+@media (min-width: 30em) {
+  /* line 92, ../sass/_layout.scss */
+  .jumbo {
+    height: 500px;
+  }
+  /* line 119, ../sass/_layout.scss */
+  .jumbo .jumbo-marketing {
+    width: 50%;
+    float: left;
+    padding: 50px 0 0 50px;
+  }
+  /* line 126, ../sass/_layout.scss */
+  .jumbo .jumbo-image {
+    position: relative;
+    width: 50%;
+    height: 500px;
+    float: right;
+  }
+  /* line 131, ../sass/_layout.scss */
+  .jumbo .jumbo-image img {
+    position: absolute;
+    bottom: 0;
+    height: 510px;
+  }
 }
