@@ -73,7 +73,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 p, a, li, h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
-  color: #534a44;
+  color: #888888;
 }
 
 /* line 12, ../sass/_base.scss */
@@ -83,13 +83,13 @@ h1 {
 @media (min-width: 30em) {
   /* line 12, ../sass/_base.scss */
   h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 47em) {
   /* line 12, ../sass/_base.scss */
   h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -148,10 +148,10 @@ header .header-container .branding {
   overflow: hidden;
   *zoom: 1;
   *zoom: 1;
-  max-width: 61em;
-  _width: 61em;
-  padding-left: 1em;
-  padding-right: 1em;
+  max-width: 124em;
+  _width: 124em;
+  padding-left: 4em;
+  padding-right: 4em;
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
@@ -170,41 +170,45 @@ header .header-container .branding i {
   line-height: 50px;
   float: left;
   font-size: 2.5rem;
-  color: #e95a3e;
+  color: #0586a6;
 }
 /* line 35, ../sass/_layout.scss */
 header .header-container .branding h3 {
   display: inline-block;
   line-height: 50px;
   vertical-align: middle;
-  color: #4181a1;
+  color: #0586a6;
   margin-left: 20px;
 }
 /* line 41, ../sass/_layout.scss */
 header .header-container .branding h3 span {
-  color: #534a44;
+  color: #aaaaaa;
 }
 /* line 45, ../sass/_layout.scss */
 header .header-container .navbar {
   width: 100%;
-  background-color: #4181a1;
+  background-color: #0586a6;
 }
 /* line 50, ../sass/_layout.scss */
 header .header-container .navbar .navbar-box ul li {
   padding: 10px 5%;
-  border-bottom: 1px solid #599bbc;
+  border-bottom: 1px solid #31adc2;
   vertical-align: middle;
 }
 /* line 54, ../sass/_layout.scss */
 header .header-container .navbar .navbar-box ul li a {
-  color: #f7efe7;
+  color: whitesmoke;
+}
+/* line 56, ../sass/_layout.scss */
+header .header-container .navbar .navbar-box ul li a:hover {
+  color: #aad5db;
 }
 @media (min-width: 30em) {
-  /* line 71, ../sass/_layout.scss */
+  /* line 74, ../sass/_layout.scss */
   header .header-container .navbar .navbar-box {
-    max-width: 31em;
-    padding-left: 1em;
-    padding-right: 1em;
+    max-width: 34em;
+    padding-left: 4em;
+    padding-right: 4em;
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
@@ -215,7 +219,7 @@ header .header-container .navbar .navbar-box ul li a {
     display: table;
     clear: both;
   }
-  /* line 75, ../sass/_layout.scss */
+  /* line 78, ../sass/_layout.scss */
   header .header-container .navbar .navbar-box ul {
     float: right;
     margin: 0;
@@ -246,14 +250,14 @@ header .header-container .navbar .navbar-box ul li a {
   header .header-container .navbar .navbar-box ul li.last {
     padding-right: 0;
   }
-  /* line 78, ../sass/_layout.scss */
+  /* line 81, ../sass/_layout.scss */
   header .header-container .navbar .navbar-box ul li {
     padding: 10px 20px;
     border-bottom: none;
   }
 }
 
-/* line 92, ../sass/_layout.scss */
+/* line 95, ../sass/_layout.scss */
 .jumbo {
   display: block;
   width: 100%;
@@ -267,38 +271,143 @@ header .header-container .navbar .navbar-box ul li a {
   background-size: cover;
   margin: 0 auto;
 }
-/* line 106, ../sass/_layout.scss */
+/* line 109, ../sass/_layout.scss */
 .jumbo .jumbo-marketing {
   padding: 30px 5%;
 }
-/* line 108, ../sass/_layout.scss */
+/* line 111, ../sass/_layout.scss */
 .jumbo .jumbo-marketing h1 {
   color: white;
   font-weight: 200;
   line-height: 1.2;
 }
 @media (min-width: 30em) {
-  /* line 92, ../sass/_layout.scss */
+  /* line 95, ../sass/_layout.scss */
   .jumbo {
     height: 500px;
   }
-  /* line 119, ../sass/_layout.scss */
+  /* line 122, ../sass/_layout.scss */
   .jumbo .jumbo-marketing {
     width: 50%;
     float: left;
     padding: 50px 0 0 50px;
   }
-  /* line 126, ../sass/_layout.scss */
+  /* line 129, ../sass/_layout.scss */
   .jumbo .jumbo-image {
     position: relative;
     width: 50%;
     height: 500px;
     float: right;
   }
-  /* line 131, ../sass/_layout.scss */
+  /* line 134, ../sass/_layout.scss */
   .jumbo .jumbo-image img {
     position: absolute;
     bottom: 0;
     height: 510px;
   }
+}
+
+/* line 146, ../sass/_layout.scss */
+.marketing-statement {
+  *zoom: 1;
+  max-width: 124em;
+  _width: 124em;
+  padding-left: 4em;
+  padding-right: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 5%;
+  text-align: center;
+}
+/* line 38, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.marketing-statement:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 152, ../sass/_layout.scss */
+.marketing-statement h2 {
+  color: #0586a6;
+  margin-bottom: 10px;
+}
+/* line 157, ../sass/_layout.scss */
+.marketing-statement h5 {
+  color: #333333;
+  font-weight: 300;
+}
+/* line 160, ../sass/_layout.scss */
+.marketing-statement h5 span {
+  font-weight: 400;
+}
+/* line 165, ../sass/_layout.scss */
+.marketing-statement h4 {
+  display: inline-block;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  transform: rotate(10deg);
+  margin: 30px auto;
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #0586a6;
+  color: white;
+}
+/* line 177, ../sass/_layout.scss */
+.marketing-statement .marketing-why {
+  *zoom: 1;
+  max-width: 124em;
+  _width: 124em;
+  padding-left: 4em;
+  padding-right: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+/* line 38, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.marketing-statement .marketing-why:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 181, ../sass/_layout.scss */
+.marketing-statement .marketing-why section {
+  margin: 50px auto;
+}
+/* line 185, ../sass/_layout.scss */
+.marketing-statement .marketing-why h5 {
+  font-weight: 400;
+  color: #0586a6;
+  margin-bottom: 10px;
+}
+/* line 191, ../sass/_layout.scss */
+.marketing-statement .marketing-why p {
+  font-weight: 300;
+  color: #333333;
+}
+/* line 196, ../sass/_layout.scss */
+.marketing-statement .marketing-why .left-marketing {
+  width: 48.27586%;
+  float: left;
+  margin-right: 3.44828%;
+  display: inline;
+}
+/* line 200, ../sass/_layout.scss */
+.marketing-statement .marketing-why .right-marketing {
+  width: 48.27586%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -4em;
+  display: inline;
+}
+
+/* line 212, ../sass/_layout.scss */
+.travel {
+  border-top: 5px solid #31adc2;
 }

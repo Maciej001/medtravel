@@ -1,7 +1,7 @@
 // Susy setup -------------------------------------------
 $total-columns               	: 12;
-$column-width       					: 4em;
-$gutter-width 								: 1em;
+$column-width       					: 6em;
+$gutter-width 								: 4em;
 $grid-padding 								: $gutter-width;
 
 @include border-box-sizing;
@@ -29,7 +29,7 @@ header {
 				line-height: 50px;
 				float: left;
 				font-size: 2.5rem;
-				color: $red;
+				color: $blue;
 			}
 			
 			h3 {
@@ -38,7 +38,7 @@ header {
 				vertical-align: middle;
 				color: $blue;
 				margin-left: 20px;
-				span { color:  $gray;}
+				span { color:  $light-gray;}
 			}
 		} // branding
 
@@ -49,11 +49,14 @@ header {
 				ul {
 					li {
 						padding: 10px 5%;
-						border-bottom: 1px solid lighten($blue, 10%);
+						border-bottom: 1px solid $light-blue;
 						vertical-align: middle;
 						a {
-							color: $light-beige;
-						}
+							color: $white;
+							&:hover {
+								color: $pale-blue;
+							}
+						} // a
 					} // li
 				} // ul
 			} // navbar-box
@@ -136,7 +139,77 @@ header {
 			}
 		}
 	} // > $small
-
-
-
 } // jumbo
+
+// Marketing-statement ------------------------------------------
+
+.marketing-statement {
+	@include container;
+	padding: 30px 5%;
+	text-align: center;
+
+
+	h2 {
+		color: $blue;
+		margin-bottom: 10px;
+	}
+
+	h5 {
+		color:  $dark-gray;
+		font-weight: 300;
+		span {
+			font-weight: 400;
+		}
+	}
+
+	h4 {
+		display: inline-block;
+		@include border-radius(2px);
+		@include rotate(10deg);
+		margin: 30px auto;
+		width: 150px;
+		height: 60px;
+		line-height: 60px;
+		background-color: $blue;
+		color: white;
+	}
+
+	.marketing-why {
+		@include container;
+		text-align: left;
+
+		section {
+			margin: 50px auto;
+		}
+
+		h5 {
+			font-weight: 400;
+			color: $blue;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-weight: 300;
+			color: $dark-gray;
+		}
+
+		.left-marketing {
+			@include span-columns(6, 12);
+		}
+
+		.right-marketing {
+			@include span-columns(6 omega, 12);
+		}
+	} // marketing-why
+} // marketing-statement
+
+
+
+
+
+// Travel ---------------------------------------
+
+.travel {
+	border-top: 5px solid $light-blue;
+
+}

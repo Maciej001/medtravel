@@ -10,8 +10,8 @@ p,a, li, #{headings()}    {
 }
 
 h1 { 																font-size: 2.5rem; 
-	@include at-breakpoint($small)  {	font-size: 3.2rem; }
-	@include at-breakpoint($medium) {	font-size: 4rem; }
+	@include at-breakpoint($small)  {	font-size: 3rem; }
+	@include at-breakpoint($medium) {	font-size: 3.5rem; }
 }
 
 h2 { font-size: 2.5rem; }
