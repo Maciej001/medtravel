@@ -39,22 +39,32 @@ header {
 				color: $blue;
 				margin-left: 20px;
 				span { color:  $light-gray;}
+				@include clearfix;
 			}
+
+			
 		} // branding
 
 		.navbar {
-			width: 100%;
-			background-color: $blue;
+
+			@include container;
+			max-width: $max-width;
 			.navbar-box {
+				margin-bottom: 20px;
 				ul {
 					li {
-						padding: 10px 5%;
-						border-bottom: 1px solid $light-blue;
+						padding: 0 5%;
+						
 						vertical-align: middle;
 						a {
-							color: $white;
+							display: inline-block;
+							color: $gray;
+							padding: 10px 0;
+							border-bottom: 5px solid $light-blue;
+							font-size: 1.25rem;
 							&:hover {
-								color: $pale-blue;
+								@include transition(all 0.5s);
+								border-bottom: 5px solid $red;
 							}
 						} // a
 					} // li
@@ -67,16 +77,11 @@ header {
 
 	@include at-breakpoint($small) {
 		.header-container {
-			.branding {
-
-			} // branding
 			.navbar {
+				margin-top: 20px;
 				.navbar-box {
-					@include container;
-					max-width: 1200px;
-
 					ul {
-						float: right;
+
 						@include horizontal-list;
 						li { 
 							padding: 10px 20px;
@@ -95,7 +100,7 @@ header {
 .jumbo {
 	display: block;
 	width: 100%;
-	height: 350px;
+	height: 500px;
 
 	@include background(image-url('countryside.jpg'));
 	background-repeat: no-repeat;
@@ -106,39 +111,44 @@ header {
   background-size: cover;
   margin: 0 auto;
 	
-	.jumbo-marketing {
-		padding: 30px 5%;
-	  h1 {
-	  	color: white;
-	  	font-weight: 200;
-	  	line-height: 1.2;
-	  
-	  }
-  } // jumbo-marketing
-
-	@include at-breakpoint($small) {
-		height: 500px;
+	.jumbo-container {
+		@include container;
+		max-width: $max-width;
 
 		.jumbo-marketing {
-			width: 50%;
-			float: left;
-			padding: 50px 0 0 50px;
+			padding: 30px 5%;
+		  h1 {
+		  	color: white;
+		  	font-weight: 400;
+		  	line-height: 1.25;
+		  	@include text-shadow(#555 -1px 1px 2px);
+		  }
+	  } // jumbo-marketing
 
-		} // jumbo-marketing
-
-		.jumbo-image {
-			position: relative;
-			width: 50%;
+		@include at-breakpoint($small) {
 			height: 500px;
-			float: right;
-			img {
-				position:  absolute;
-				bottom: 0;
-				height: 510px;
 
-			}
-		}
-	} // > $small
+			.jumbo-marketing {
+				width: 50%;
+				float: left;
+				padding: 50px 0 0 0;
+
+			} // jumbo-marketing
+
+			.jumbo-image {
+				position: relative;
+				width: 50%;
+				height: 500px;
+				float: right;
+				img {
+					position:  absolute;
+					bottom: 0;
+					height: 540px;
+
+				}
+			} // jumbo-image
+		} // > $small
+	} // jumbo-container
 } // jumbo
 
 // Marketing-statement ------------------------------------------
@@ -147,16 +157,17 @@ header {
 	@include container;
 	padding: 30px 5%;
 	text-align: center;
-
-
+	border-bottom: 5px solid $blue;
+	border-top: 5px solid $gray;
 	h2 {
 		color: $blue;
 		margin-bottom: 10px;
 	}
 
 	h5 {
-		color:  $dark-gray;
-		font-weight: 300;
+		color:  $gray;
+		font-weight: 400;
+		margin-bottom: 10px;
 		span {
 			font-weight: 400;
 		}
@@ -200,16 +211,40 @@ header {
 		.right-marketing {
 			@include span-columns(6 omega, 12);
 		}
+
+		.next-step {
+			text-align: center;
+		}
+
+		
+
 	} // marketing-why
 } // marketing-statement
 
 
+// Clinic ---------------------------------------
 
+.clinic {
+	display: block;
+	width: 100%;
+	height: 700px;
+
+	@include background(image-url('marketing-gabinet.jpg'));
+	color: white;
+	background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0 auto;
+
+  
+} // clinic
 
 
 // Travel ---------------------------------------
 
 .travel {
 	border-top: 5px solid $light-blue;
-
 }

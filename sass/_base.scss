@@ -24,3 +24,24 @@ a { text-decoration: none;}
 
 header, footer {clear: both;}
 
+
+a.learn-more {
+	display: inline-block;
+	font-size: 1.4rem;
+	padding: 15px 25px;
+	vertical-align: middle;
+	background-color: transparent;
+	color: $red;
+	border: 5px solid $red;
+	@include border-radius(2px);
+	&:hover {
+		@include transition(all 0.5s);
+		color: white;
+		background-color: $red;
+	}
+}
+
+.layout {
+	@include container;
+	max-width: 75em;
+} // layout

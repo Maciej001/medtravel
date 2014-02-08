@@ -128,6 +128,49 @@ header, footer {
   clear: both;
 }
 
+/* line 28, ../sass/_base.scss */
+a.learn-more {
+  display: inline-block;
+  font-size: 1.4rem;
+  padding: 15px 25px;
+  vertical-align: middle;
+  background-color: transparent;
+  color: #d73d01;
+  border: 5px solid #d73d01;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 37, ../sass/_base.scss */
+a.learn-more:hover {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  color: white;
+  background-color: #d73d01;
+}
+
+/* line 44, ../sass/_base.scss */
+.layout {
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75em;
+}
+/* line 38, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.layout:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* line 14, C:/Ruby200/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
 * {
   -webkit-box-sizing: border-box;
@@ -170,58 +213,71 @@ header .header-container .branding i {
   line-height: 50px;
   float: left;
   font-size: 2.5rem;
-  color: #0586a6;
+  color: #048c82;
 }
 /* line 35, ../sass/_layout.scss */
 header .header-container .branding h3 {
   display: inline-block;
   line-height: 50px;
   vertical-align: middle;
-  color: #0586a6;
+  color: #048c82;
   margin-left: 20px;
+  overflow: hidden;
+  *zoom: 1;
 }
 /* line 41, ../sass/_layout.scss */
 header .header-container .branding h3 span {
   color: #aaaaaa;
 }
-/* line 45, ../sass/_layout.scss */
+/* line 48, ../sass/_layout.scss */
 header .header-container .navbar {
-  width: 100%;
-  background-color: #0586a6;
+  *zoom: 1;
+  max-width: 124em;
+  _width: 124em;
+  padding-left: 4em;
+  padding-right: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
 }
-/* line 50, ../sass/_layout.scss */
+/* line 38, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+header .header-container .navbar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 52, ../sass/_layout.scss */
+header .header-container .navbar .navbar-box {
+  margin-bottom: 20px;
+}
+/* line 55, ../sass/_layout.scss */
 header .header-container .navbar .navbar-box ul li {
-  padding: 10px 5%;
-  border-bottom: 1px solid #31adc2;
+  padding: 0 5%;
   vertical-align: middle;
 }
-/* line 54, ../sass/_layout.scss */
+/* line 59, ../sass/_layout.scss */
 header .header-container .navbar .navbar-box ul li a {
-  color: whitesmoke;
+  display: inline-block;
+  color: #888888;
+  padding: 10px 0;
+  border-bottom: 5px solid #67dac9;
+  font-size: 1.25rem;
 }
-/* line 56, ../sass/_layout.scss */
+/* line 65, ../sass/_layout.scss */
 header .header-container .navbar .navbar-box ul li a:hover {
-  color: #aad5db;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  border-bottom: 5px solid #d73d01;
 }
 @media (min-width: 30em) {
-  /* line 74, ../sass/_layout.scss */
-  header .header-container .navbar .navbar-box {
-    max-width: 34em;
-    padding-left: 4em;
-    padding-right: 4em;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
+  /* line 80, ../sass/_layout.scss */
+  header .header-container .navbar {
+    margin-top: 20px;
   }
-  /* line 38, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  header .header-container .navbar .navbar-box:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  /* line 78, ../sass/_layout.scss */
+  /* line 83, ../sass/_layout.scss */
   header .header-container .navbar .navbar-box ul {
-    float: right;
     margin: 0;
     padding: 0;
     border: 0;
@@ -250,18 +306,18 @@ header .header-container .navbar .navbar-box ul li a:hover {
   header .header-container .navbar .navbar-box ul li.last {
     padding-right: 0;
   }
-  /* line 81, ../sass/_layout.scss */
+  /* line 86, ../sass/_layout.scss */
   header .header-container .navbar .navbar-box ul li {
     padding: 10px 20px;
     border-bottom: none;
   }
 }
 
-/* line 95, ../sass/_layout.scss */
+/* line 100, ../sass/_layout.scss */
 .jumbo {
   display: block;
   width: 100%;
-  height: 350px;
+  height: 500px;
   background: url('../images/countryside.jpg?1390666344');
   background-repeat: no-repeat;
   background-position: center center;
@@ -271,43 +327,61 @@ header .header-container .navbar .navbar-box ul li a:hover {
   background-size: cover;
   margin: 0 auto;
 }
-/* line 109, ../sass/_layout.scss */
-.jumbo .jumbo-marketing {
+/* line 114, ../sass/_layout.scss */
+.jumbo .jumbo-container {
+  *zoom: 1;
+  max-width: 124em;
+  _width: 124em;
+  padding-left: 4em;
+  padding-right: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+}
+/* line 38, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.jumbo .jumbo-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 118, ../sass/_layout.scss */
+.jumbo .jumbo-container .jumbo-marketing {
   padding: 30px 5%;
 }
-/* line 111, ../sass/_layout.scss */
-.jumbo .jumbo-marketing h1 {
+/* line 120, ../sass/_layout.scss */
+.jumbo .jumbo-container .jumbo-marketing h1 {
   color: white;
-  font-weight: 200;
-  line-height: 1.2;
+  font-weight: 400;
+  line-height: 1.25;
+  text-shadow: #555555 -1px 1px 2px;
 }
 @media (min-width: 30em) {
-  /* line 95, ../sass/_layout.scss */
-  .jumbo {
+  /* line 114, ../sass/_layout.scss */
+  .jumbo .jumbo-container {
     height: 500px;
   }
-  /* line 122, ../sass/_layout.scss */
-  .jumbo .jumbo-marketing {
+  /* line 131, ../sass/_layout.scss */
+  .jumbo .jumbo-container .jumbo-marketing {
     width: 50%;
     float: left;
-    padding: 50px 0 0 50px;
+    padding: 50px 0 0 0;
   }
-  /* line 129, ../sass/_layout.scss */
-  .jumbo .jumbo-image {
+  /* line 138, ../sass/_layout.scss */
+  .jumbo .jumbo-container .jumbo-image {
     position: relative;
     width: 50%;
     height: 500px;
     float: right;
   }
-  /* line 134, ../sass/_layout.scss */
-  .jumbo .jumbo-image img {
+  /* line 143, ../sass/_layout.scss */
+  .jumbo .jumbo-container .jumbo-image img {
     position: absolute;
     bottom: 0;
-    height: 510px;
+    height: 540px;
   }
 }
 
-/* line 146, ../sass/_layout.scss */
+/* line 156, ../sass/_layout.scss */
 .marketing-statement {
   *zoom: 1;
   max-width: 124em;
@@ -318,6 +392,8 @@ header .header-container .navbar .navbar-box ul li a:hover {
   margin-right: auto;
   padding: 30px 5%;
   text-align: center;
+  border-bottom: 5px solid #048c82;
+  border-top: 5px solid #888888;
 }
 /* line 38, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .marketing-statement:after {
@@ -325,21 +401,22 @@ header .header-container .navbar .navbar-box ul li a:hover {
   display: table;
   clear: both;
 }
-/* line 152, ../sass/_layout.scss */
+/* line 162, ../sass/_layout.scss */
 .marketing-statement h2 {
-  color: #0586a6;
+  color: #048c82;
   margin-bottom: 10px;
 }
-/* line 157, ../sass/_layout.scss */
+/* line 167, ../sass/_layout.scss */
 .marketing-statement h5 {
-  color: #333333;
-  font-weight: 300;
+  color: #888888;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
-/* line 160, ../sass/_layout.scss */
+/* line 171, ../sass/_layout.scss */
 .marketing-statement h5 span {
   font-weight: 400;
 }
-/* line 165, ../sass/_layout.scss */
+/* line 176, ../sass/_layout.scss */
 .marketing-statement h4 {
   display: inline-block;
   -webkit-border-radius: 2px;
@@ -356,10 +433,10 @@ header .header-container .navbar .navbar-box ul li a:hover {
   width: 150px;
   height: 60px;
   line-height: 60px;
-  background-color: #0586a6;
+  background-color: #048c82;
   color: white;
 }
-/* line 177, ../sass/_layout.scss */
+/* line 188, ../sass/_layout.scss */
 .marketing-statement .marketing-why {
   *zoom: 1;
   max-width: 124em;
@@ -376,29 +453,29 @@ header .header-container .navbar .navbar-box ul li a:hover {
   display: table;
   clear: both;
 }
-/* line 181, ../sass/_layout.scss */
+/* line 192, ../sass/_layout.scss */
 .marketing-statement .marketing-why section {
   margin: 50px auto;
 }
-/* line 185, ../sass/_layout.scss */
+/* line 196, ../sass/_layout.scss */
 .marketing-statement .marketing-why h5 {
   font-weight: 400;
-  color: #0586a6;
+  color: #048c82;
   margin-bottom: 10px;
 }
-/* line 191, ../sass/_layout.scss */
+/* line 202, ../sass/_layout.scss */
 .marketing-statement .marketing-why p {
   font-weight: 300;
   color: #333333;
 }
-/* line 196, ../sass/_layout.scss */
+/* line 207, ../sass/_layout.scss */
 .marketing-statement .marketing-why .left-marketing {
   width: 48.27586%;
   float: left;
   margin-right: 3.44828%;
   display: inline;
 }
-/* line 200, ../sass/_layout.scss */
+/* line 211, ../sass/_layout.scss */
 .marketing-statement .marketing-why .right-marketing {
   width: 48.27586%;
   float: right;
@@ -406,8 +483,28 @@ header .header-container .navbar .navbar-box ul li a:hover {
   *margin-left: -4em;
   display: inline;
 }
+/* line 215, ../sass/_layout.scss */
+.marketing-statement .marketing-why .next-step {
+  text-align: center;
+}
 
-/* line 212, ../sass/_layout.scss */
+/* line 227, ../sass/_layout.scss */
+.clinic {
+  display: block;
+  width: 100%;
+  height: 700px;
+  background: url('../images/marketing-gabinet.jpg?1390953314');
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+/* line 248, ../sass/_layout.scss */
 .travel {
-  border-top: 5px solid #31adc2;
+  border-top: 5px solid #67dac9;
 }
