@@ -1,8 +1,10 @@
 // Susy setup -------------------------------------------
-$total-columns               	: 12;
-$column-width       			: 6em;
-$gutter-width 					: 2em;
-$grid-padding 					: $gutter-width;
+
+$susy: (
+columns      	: 12,
+gutters			: 2em,
+math 			: fluid,
+);
 
 @include border-box-sizing;
 body {
@@ -29,7 +31,7 @@ header {
 
 		.navbar {
 			li {
-				padding: 0 5%;
+				padding: 0 6%;
 				background: $yellow;
 				vertical-align: middle;
 				border-bottom: 1px solid lighten($yellow, 10%);
@@ -190,7 +192,7 @@ header {
 	}
 
 	.marketing-why {
-		@include container;
+	
 		text-align: left;
 
 		section {
@@ -216,24 +218,26 @@ header {
 	} // marketing-why
 
 
-	@include at-breakpoint($small) {
+	/*@include at-breakpoint($small) {
 		@include container;
 		max-width: $max-width;
 		padding: 30px $column-width;
 
 		.marketing-why {
 			.left-marketing {
-				@include span-columns(6, 12);
+				@include span(6);
+				
 			}
 
 			.right-marketing {
-				@include span-columns(6 omega, 12);
+				@include span(6 of 12);
+				@include omega;
 			}
 
 		} // marketing-why
 
 	} // size > $small
-
+*/
 } // marketing-statement
 
 
