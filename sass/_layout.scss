@@ -2,20 +2,23 @@
 
 $susy: (
 columns      	: 12,
+gutters			: 1,
 math 			: fluid,
+gutter-position	: inside, 
 );
 
 $grid-padding	: 1em;
 
-@include global-box-sizing;
+@include global-box-sizing; // susy sets it to this value by default
+
 body {
 	@include show-grid(background);
+	@include global-box-sizing;
 }
 
 // Header -------------------------------------------------
 
 header {
-
 	.header-container {
 		text-align: center;
 
@@ -32,12 +35,14 @@ header {
 		.navbar {
 			li {
 				padding: 0 5%;
-				background: $yellow;
+				background: $blue;
 				vertical-align: middle;
-				border-bottom: 1px solid lighten($yellow, 10%);
+				border-bottom: 1px solid lighten($blue, 10%);
+
 				&:last-of-type {
 					border-bottom: none;
 				}
+
 				a {
 					display: inline-block;
 					color: white;
@@ -46,7 +51,6 @@ header {
 				} // a
 			} // li
 		} // navbar
-
 	} // header-container
 
 	@include breakpoint($small) {
@@ -71,48 +75,40 @@ header {
 						background: none;
 						border-bottom: none;
 						a {
-							border-bottom: 5px solid $yellow;
+							border-bottom: 5px solid $blue;
 							color: $gray;
 							&:hover {
 								@include transition(all 0.25s);
-								border-bottom: 5px solid $blue;
+								border-bottom: 5px solid $dark-blue;
 							}
 						} // a							
 					} // li
 				} // navbar-box
 			} // navbar
 		} // header-container
-	} // > $small
-
+	} // > breakpoint $small
 } // header
 
 // Jumbo ---------------------------
 
 .jumbo {
-
 	width: 100%;
-	height: 300px;
+	height: 350px;
 	text-align: center;
-	overflow: hidden;
-
-	@include background(image-url('countryside.jpg'));
-	@include center-background;
+	border-bottom: 1px solid $light-gray;
 	
 	.jumbo-container {
 		position: relative;
 		max-width: $max-width;
-		height: 300px;
+		height: 350px;
 		padding: 0 $grid-padding;
-		
+
 		.jumbo-marketing {
 			padding-top: 10px;
-			h1 {
-			  	color: white;
-			  	font-weight: 200;
-			  	line-height: 1.25;
-  				@include text-shadow(#555 -1px 1px 2px);
-			}
+		
 	  	} // jumbo-marketing
+
+	  	h1 { font-weight: 300;}
 
   		img {
   			position: absolute;
@@ -127,7 +123,7 @@ header {
 	} // jumbo-container
 
 	@include breakpoint($small) {
-		height: 500px;
+		height: 400px;
 		text-align: left;
 
 		.jumbo-container {
@@ -138,16 +134,16 @@ header {
 
 			.jumbo-marketing {
 				padding-top: 50px;
-				width: 40%;
+				@include span(6);
 				h1 { font-weight: 300;}
 
 			} // jumbo-marketing
 		
 			img {			
 				position: absolute;
-				margin-left: 450px;
-
-				height: 540px;
+				margin-left: span(6);
+				right: 0;
+				height: 440px;
 			} // img
 		} // jumbo-container
 	} // size > $small
@@ -159,19 +155,18 @@ header {
 
 .marketing-statement {
 	@include container;
-	padding: 30px 1rem;
+	padding: 50px gutter();
 	max-width: $max-width;
 	text-align: center;
 
 	h2 {
 		color: $blue;
-		margin-bottom: 10px;
 	}
 
 	h5 {
 		color:  $gray;
 		font-weight: 400;
-		margin-bottom: 10px;
+		margin: 10px auto;
 	}
 
 	h4 {
@@ -182,13 +177,9 @@ header {
 		
 		background-color: $blue;
 		color: white;
-
-		
-
 	}
 
 	.marketing-why {
-	
 		text-align: left;
 
 		section {
@@ -196,14 +187,9 @@ header {
 		}
 
 		h5 {
-			font-weight: 400;
+			font-weight: bold;
 			color: $blue;
 			margin-bottom: 10px;
-		}
-
-		p {
-			font-weight: 300;
-			color: $dark-gray;
 		}
 
 		.next-step {
@@ -217,15 +203,13 @@ header {
 		@include container;
 		max-width: $max-width;
 
-
 		.marketing-why {
 			.left-marketing {
 				@include span(6);
-				
 			}
 
 			.right-marketing {
-				@include span(5 of 12);
+				@include span(6);
 				@include omega;
 			}
 
@@ -236,48 +220,88 @@ header {
 } // marketing-statement
 
 
+
 // Clinic ---------------------------------------
 
 .clinic {
-	display: block;
-	width: 100%;
-	height: 700px;
-	background: $blue;
+	background: #f5f5f5;
+	text-align: center;
+	#{headings()} {color: $dark-blue; font-weight: bold;}
 
-	/*@include background(image-url('marketing-gabinet.jpg'));
-	color: white;
-	background-repeat: no-repeat;
-	background-position: center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	margin: 0 auto;*/
+	.photo-box {
+		@include container;
+		max-width: $max-width;
+		padding: 20px gutter();
+
+		.photo-box-photo {
+			img {
+				width: 100%;
+				@include border-radius(3px);
+			} 
+		} // photo-box-photo
+
+		h1 {
+			border-bottom: 1px solid $very-light-gray;
+			padding-bottom: 20px;
+		}
+
+		@include breakpoint($small) {
+			.photo-box-photo {
+				@include span(6);
+			}
+
+			.photo-box-text {
+				@include span(6);
+				@include omega;
+			}
+		} // at-breakpoint $small 
+	} // photo-box
+
+	.doctors {
+		@include container;
+		max-width: $max-width;
+		padding: 20px gutter();
+
+		text-align: center;
+		#{headings()} {color: $dark-blue;}
+
+		.doctor {
+			margin: 35px 0;
+
+			img {
+				width:  125px;
+				height: 125px;
+				@include border-radius(50%);
+				padding: 7px;
+				background: lighten($blue,15%);
+				border: 1px solid $blue;
+			} // img
+		} // .doctor
+
+		@include breakpoint($small) {
+
+			.doctor {
+
+				@include span(4);
+				
+				&last-of-type {
+					@include omega;
+				}
+
+				img {
+					width: 175px;
+					height: 175px;
+				}
+
+				p {text-align: left;}
+			} // .doctor
+		} // breakpoint $small
+
+	} // .doctors
+
 
 } // clinic
 
-.photo-box {
-	@include container;
-	padding: 70px 0;
-
-	.photo-box-photo {
-		img {
-			width: 100%;
-		}
-	}
-
-	@include breakpoint($small) {
-		.photo-box-photo {
-			@include span(6);
-			
-		}
-
-		.photo-box-text {
-			@include span(6);
-			@include omega;
-		}
-	} // at-breakpoint $small 
-} // photo-box
 
 
 // Travel ---------------------------------------
