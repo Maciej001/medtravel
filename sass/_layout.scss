@@ -2,26 +2,26 @@
 
 $susy: (
 columns      	: 12,
-gutters			: 2em,
 math 			: fluid,
 );
 
-@include border-box-sizing;
+$grid-padding	: 1em;
+
+@include global-box-sizing;
 body {
-	@include susy-grid-background;
+	@include show-grid(background);
 }
 
 // Header -------------------------------------------------
 
 header {
-	width: 100%;
 
 	.header-container {
-		padding: 0;
 		text-align: center;
-		
+
 		.branding {
 			margin: 10px auto;
+			
 			h2 {
 				color: $blue;
 				span { color:  $light-gray;}
@@ -31,7 +31,7 @@ header {
 
 		.navbar {
 			li {
-				padding: 0 6%;
+				padding: 0 5%;
 				background: $yellow;
 				vertical-align: middle;
 				border-bottom: 1px solid lighten($yellow, 10%);
@@ -49,9 +49,10 @@ header {
 
 	} // header-container
 
-	@include at-breakpoint($small) {
+	@include breakpoint($small) {
 		.header-container {
 			text-align: left;
+			padding: 0 $grid-padding;
 
 			.branding {
 				@include container;
@@ -69,7 +70,7 @@ header {
 						padding: 10px 40px 10px 0;
 						background: none;
 						border-bottom: none;
-						a{
+						a {
 							border-bottom: 5px solid $yellow;
 							color: $gray;
 							&:hover {
@@ -95,19 +96,14 @@ header {
 	overflow: hidden;
 
 	@include background(image-url('countryside.jpg'));
-	background-repeat: no-repeat;
- 	 background-position: center center;
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-  	margin: 0 auto;
+	@include center-background;
 	
 	.jumbo-container {
+		position: relative;
 		max-width: $max-width;
 		height: 300px;
-		position: relative;
-
+		padding: 0 $grid-padding;
+		
 		.jumbo-marketing {
 			padding-top: 10px;
 			h1 {
@@ -130,7 +126,7 @@ header {
 	 
 	} // jumbo-container
 
-	@include at-breakpoint($small) {
+	@include breakpoint($small) {
 		height: 500px;
 		text-align: left;
 
@@ -210,18 +206,17 @@ header {
 			color: $dark-gray;
 		}
 
-		
-
 		.next-step {
 			text-align: center;
 		}
+
 	} // marketing-why
 
 
-	/*@include at-breakpoint($small) {
+	@include breakpoint($small) {
 		@include container;
 		max-width: $max-width;
-		padding: 30px $column-width;
+
 
 		.marketing-why {
 			.left-marketing {
@@ -230,14 +225,14 @@ header {
 			}
 
 			.right-marketing {
-				@include span(6 of 12);
+				@include span(5 of 12);
 				@include omega;
 			}
 
 		} // marketing-why
 
 	} // size > $small
-*/
+
 } // marketing-statement
 
 
@@ -271,14 +266,15 @@ header {
 		}
 	}
 
-	@include at-breakpoint($small) {
+	@include breakpoint($small) {
 		.photo-box-photo {
-			@include span-columns(6,12);
+			@include span(6);
 			
 		}
 
 		.photo-box-text {
-			@include span-columns(6 omega, 12);
+			@include span(6);
+			@include omega;
 		}
 	} // at-breakpoint $small 
 } // photo-box
