@@ -75,7 +75,7 @@ p, a, li, h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  color: #1a71a3;
+  color: #1481d9;
 }
 
 /* line 18, ../sass/_base.scss */
@@ -188,8 +188,8 @@ a.learn-more {
   margin: 10px auto;
   vertical-align: middle;
   background-color: transparent;
-  color: #3991c4;
-  border: 5px solid #3991c4;
+  color: #5facf0;
+  border: 5px solid #5facf0;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -201,7 +201,7 @@ a.learn-more:hover {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   color: white;
-  background-color: #3991c4;
+  background-color: #5facf0;
 }
 @media (min-width: 30em) {
   /* line 63, ../sass/_base.scss */
@@ -232,30 +232,30 @@ header .header-container {
 header .header-container .branding {
   margin: 10px auto;
 }
-/* line 28, ../sass/_layout.scss */
+/* line 29, ../sass/_layout.scss */
 header .header-container .branding h2 {
-  color: #3991c4;
+  color: #5facf0;
 }
-/* line 30, ../sass/_layout.scss */
+/* line 31, ../sass/_layout.scss */
 header .header-container .branding h2 span {
   color: #aaaaaa;
 }
-/* line 32, ../sass/_layout.scss */
+/* line 33, ../sass/_layout.scss */
 header .header-container .branding h6 {
   color: #151515;
 }
-/* line 36, ../sass/_layout.scss */
+/* line 37, ../sass/_layout.scss */
 header .header-container .navbar li {
   padding: 0 5%;
-  background: #3991c4;
+  background: #5facf0;
   vertical-align: middle;
-  border-bottom: 1px solid #5fa7d1;
+  border-bottom: 1px solid #8ec4f4;
 }
-/* line 42, ../sass/_layout.scss */
+/* line 43, ../sass/_layout.scss */
 header .header-container .navbar li:last-of-type {
   border-bottom: none;
 }
-/* line 46, ../sass/_layout.scss */
+/* line 47, ../sass/_layout.scss */
 header .header-container .navbar li a {
   display: inline-block;
   color: white;
@@ -263,12 +263,12 @@ header .header-container .navbar li a {
   font-size: 1.25rem;
 }
 @media (min-width: 30em) {
-  /* line 57, ../sass/_layout.scss */
+  /* line 58, ../sass/_layout.scss */
   header .header-container {
     text-align: left;
     padding: 0 1em;
   }
-  /* line 61, ../sass/_layout.scss */
+  /* line 62, ../sass/_layout.scss */
   header .header-container .branding {
     max-width: 100%;
     margin-left: auto;
@@ -281,7 +281,7 @@ header .header-container .navbar li a {
     display: block;
     clear: both;
   }
-  /* line 65, ../sass/_layout.scss */
+  /* line 66, ../sass/_layout.scss */
   header .header-container .navbar {
     max-width: 100%;
     margin-left: auto;
@@ -294,7 +294,7 @@ header .header-container .navbar li a {
     display: block;
     clear: both;
   }
-  /* line 69, ../sass/_layout.scss */
+  /* line 70, ../sass/_layout.scss */
   header .header-container .navbar .navbar-box {
     margin: 0;
     padding: 0;
@@ -325,50 +325,51 @@ header .header-container .navbar li a {
   header .header-container .navbar .navbar-box li.last {
     padding-right: 0;
   }
-  /* line 73, ../sass/_layout.scss */
+  /* line 74, ../sass/_layout.scss */
   header .header-container .navbar .navbar-box li {
     padding: 10px 40px 10px 0;
     background: none;
     border-bottom: none;
   }
-  /* line 77, ../sass/_layout.scss */
+  /* line 78, ../sass/_layout.scss */
   header .header-container .navbar .navbar-box li a {
-    border-bottom: 5px solid #3991c4;
+    border-bottom: 5px solid #5facf0;
     color: #888888;
   }
-  /* line 80, ../sass/_layout.scss */
+  /* line 81, ../sass/_layout.scss */
   header .header-container .navbar .navbar-box li a:hover {
     -moz-transition: all 0.25s;
     -o-transition: all 0.25s;
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
-    border-bottom: 5px solid #1a71a3;
+    border-bottom: 5px solid #1481d9;
   }
 }
 
-/* line 94, ../sass/_layout.scss */
+/* line 95, ../sass/_layout.scss */
 .jumbo {
   width: 100%;
   height: 350px;
   text-align: center;
   border-bottom: 1px solid #aaaaaa;
 }
-/* line 100, ../sass/_layout.scss */
+/* line 101, ../sass/_layout.scss */
 .jumbo .jumbo-container {
   position: relative;
   max-width: 1000px;
   height: 350px;
   padding: 0 1em;
 }
-/* line 106, ../sass/_layout.scss */
+/* line 107, ../sass/_layout.scss */
 .jumbo .jumbo-container .jumbo-marketing {
   padding-top: 10px;
 }
-/* line 111, ../sass/_layout.scss */
+/* line 112, ../sass/_layout.scss */
 .jumbo .jumbo-container h1 {
   font-weight: 300;
+  color: #5facf0;
 }
-/* line 113, ../sass/_layout.scss */
+/* line 114, ../sass/_layout.scss */
 .jumbo .jumbo-container img {
   position: absolute;
   display: block;
@@ -379,12 +380,12 @@ header .header-container .navbar li a {
   height: 200px;
 }
 @media (min-width: 30em) {
-  /* line 94, ../sass/_layout.scss */
+  /* line 95, ../sass/_layout.scss */
   .jumbo {
     height: 400px;
     text-align: left;
   }
-  /* line 129, ../sass/_layout.scss */
+  /* line 130, ../sass/_layout.scss */
   .jumbo .jumbo-container {
     max-width: 100%;
     margin-left: auto;
@@ -399,7 +400,7 @@ header .header-container .navbar li a {
     display: block;
     clear: both;
   }
-  /* line 135, ../sass/_layout.scss */
+  /* line 136, ../sass/_layout.scss */
   .jumbo .jumbo-container .jumbo-marketing {
     padding-top: 50px;
     -moz-box-sizing: border-box;
@@ -410,11 +411,11 @@ header .header-container .navbar li a {
     padding-left: 2.08333%;
     padding-right: 2.08333%;
   }
-  /* line 138, ../sass/_layout.scss */
+  /* line 139, ../sass/_layout.scss */
   .jumbo .jumbo-container .jumbo-marketing h1 {
     font-weight: 300;
   }
-  /* line 142, ../sass/_layout.scss */
+  /* line 143, ../sass/_layout.scss */
   .jumbo .jumbo-container img {
     position: absolute;
     margin-left: 50%;
@@ -423,7 +424,7 @@ header .header-container .navbar li a {
   }
 }
 
-/* line 156, ../sass/_layout.scss */
+/* line 157, ../sass/_layout.scss */
 .marketing-statement {
   max-width: 100%;
   margin-left: auto;
@@ -438,17 +439,17 @@ header .header-container .navbar li a {
   display: block;
   clear: both;
 }
-/* line 162, ../sass/_layout.scss */
+/* line 163, ../sass/_layout.scss */
 .marketing-statement h2 {
-  color: #3991c4;
+  color: #5facf0;
 }
-/* line 166, ../sass/_layout.scss */
+/* line 167, ../sass/_layout.scss */
 .marketing-statement h5 {
   color: #888888;
   font-weight: 400;
   margin: 10px auto;
 }
-/* line 172, ../sass/_layout.scss */
+/* line 173, ../sass/_layout.scss */
 .marketing-statement h4 {
   display: inline-block;
   -moz-border-radius: 2px;
@@ -456,29 +457,29 @@ header .header-container .navbar li a {
   border-radius: 2px;
   margin: 30px auto;
   padding: 15px 25px;
-  background-color: #3991c4;
+  background-color: #5facf0;
   color: white;
 }
-/* line 182, ../sass/_layout.scss */
+/* line 183, ../sass/_layout.scss */
 .marketing-statement .marketing-why {
   text-align: left;
 }
-/* line 185, ../sass/_layout.scss */
+/* line 186, ../sass/_layout.scss */
 .marketing-statement .marketing-why section {
   margin: 50px auto;
 }
-/* line 189, ../sass/_layout.scss */
+/* line 190, ../sass/_layout.scss */
 .marketing-statement .marketing-why h5 {
   font-weight: bold;
-  color: #3991c4;
+  color: #5facf0;
   margin-bottom: 10px;
 }
-/* line 195, ../sass/_layout.scss */
+/* line 196, ../sass/_layout.scss */
 .marketing-statement .marketing-why .next-step {
   text-align: center;
 }
 @media (min-width: 30em) {
-  /* line 156, ../sass/_layout.scss */
+  /* line 157, ../sass/_layout.scss */
   .marketing-statement {
     max-width: 100%;
     margin-left: auto;
@@ -491,7 +492,7 @@ header .header-container .navbar li a {
     display: block;
     clear: both;
   }
-  /* line 207, ../sass/_layout.scss */
+  /* line 208, ../sass/_layout.scss */
   .marketing-statement .marketing-why .left-marketing {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -501,7 +502,7 @@ header .header-container .navbar li a {
     padding-left: 2.08333%;
     padding-right: 2.08333%;
   }
-  /* line 211, ../sass/_layout.scss */
+  /* line 212, ../sass/_layout.scss */
   .marketing-statement .marketing-why .right-marketing {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -514,17 +515,17 @@ header .header-container .navbar li a {
   }
 }
 
-/* line 226, ../sass/_layout.scss */
+/* line 227, ../sass/_layout.scss */
 .clinic {
-  background: #f5f5f5;
+  background: #edf6ff;
   text-align: center;
 }
-/* line 229, ../sass/_layout.scss */
+/* line 230, ../sass/_layout.scss */
 .clinic h1, .clinic h2, .clinic h3, .clinic h4, .clinic h5, .clinic h6 {
-  color: #1a71a3;
+  color: #1481d9;
   font-weight: bold;
 }
-/* line 231, ../sass/_layout.scss */
+/* line 232, ../sass/_layout.scss */
 .clinic .photo-box {
   max-width: 100%;
   margin-left: auto;
@@ -538,20 +539,20 @@ header .header-container .navbar li a {
   display: block;
   clear: both;
 }
-/* line 237, ../sass/_layout.scss */
+/* line 238, ../sass/_layout.scss */
 .clinic .photo-box .photo-box-photo img {
   width: 100%;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 243, ../sass/_layout.scss */
+/* line 244, ../sass/_layout.scss */
 .clinic .photo-box h1 {
   border-bottom: 1px solid #cccccc;
   padding-bottom: 20px;
 }
 @media (min-width: 30em) {
-  /* line 249, ../sass/_layout.scss */
+  /* line 250, ../sass/_layout.scss */
   .clinic .photo-box .photo-box-photo {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -561,7 +562,7 @@ header .header-container .navbar li a {
     padding-left: 2.08333%;
     padding-right: 2.08333%;
   }
-  /* line 253, ../sass/_layout.scss */
+  /* line 254, ../sass/_layout.scss */
   .clinic .photo-box .photo-box-text {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -573,7 +574,7 @@ header .header-container .navbar li a {
     float: right;
   }
 }
-/* line 260, ../sass/_layout.scss */
+/* line 261, ../sass/_layout.scss */
 .clinic .doctors {
   max-width: 100%;
   margin-left: auto;
@@ -588,15 +589,15 @@ header .header-container .navbar li a {
   display: block;
   clear: both;
 }
-/* line 266, ../sass/_layout.scss */
+/* line 267, ../sass/_layout.scss */
 .clinic .doctors h1, .clinic .doctors h2, .clinic .doctors h3, .clinic .doctors h4, .clinic .doctors h5, .clinic .doctors h6 {
-  color: #1a71a3;
+  color: #1481d9;
 }
-/* line 268, ../sass/_layout.scss */
+/* line 269, ../sass/_layout.scss */
 .clinic .doctors .doctor {
   margin: 35px 0;
 }
-/* line 271, ../sass/_layout.scss */
+/* line 272, ../sass/_layout.scss */
 .clinic .doctors .doctor img {
   width: 125px;
   height: 125px;
@@ -604,11 +605,11 @@ header .header-container .navbar li a {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   padding: 7px;
-  background: #73b2d6;
-  border: 1px solid #3991c4;
+  background: #a5d4fe;
+  border: 1px solid #5facf0;
 }
 @media (min-width: 30em) {
-  /* line 283, ../sass/_layout.scss */
+  /* line 284, ../sass/_layout.scss */
   .clinic .doctors .doctor {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -618,22 +619,22 @@ header .header-container .navbar li a {
     padding-left: 2.08333%;
     padding-right: 2.08333%;
   }
-  /* line 287, ../sass/_layout.scss */
+  /* line 288, ../sass/_layout.scss */
   .clinic .doctors .doctorlast-of-type {
     float: right;
   }
-  /* line 291, ../sass/_layout.scss */
+  /* line 292, ../sass/_layout.scss */
   .clinic .doctors .doctor img {
     width: 175px;
     height: 175px;
   }
-  /* line 296, ../sass/_layout.scss */
+  /* line 297, ../sass/_layout.scss */
   .clinic .doctors .doctor p {
     text-align: left;
   }
 }
 
-/* line 309, ../sass/_layout.scss */
+/* line 310, ../sass/_layout.scss */
 .travel {
-  border-top: 5px solid #47b5f5;
+  border-top: 5px solid #a5d4fe;
 }

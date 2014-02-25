@@ -23,6 +23,7 @@ header {
 		text-align: center;
 
 		.branding {
+
 			margin: 10px auto;
 			
 			h2 {
@@ -108,7 +109,7 @@ header {
 		
 	  	} // jumbo-marketing
 
-	  	h1 { font-weight: 300;}
+	  	h1 { font-weight: 300; color: $blue;}
 
   		img {
   			position: absolute;
@@ -224,7 +225,7 @@ header {
 // Clinic ---------------------------------------
 
 .clinic {
-	background: #f5f5f5;
+	background: $pale-blue;
 	text-align: center;
 	#{headings()} {color: $dark-blue; font-weight: bold;}
 
@@ -273,7 +274,7 @@ header {
 				height: 125px;
 				@include border-radius(50%);
 				padding: 7px;
-				background: lighten($blue,15%);
+				background: $light-blue;
 				border: 1px solid $blue;
 			} // img
 		} // .doctor
