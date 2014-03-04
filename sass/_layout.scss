@@ -76,11 +76,11 @@ header {
 						background: none;
 						border-bottom: none;
 						a {
-							border-bottom: 5px solid $blue;
+						/*	border-bottom: 5px solid $blue;*/
 							color: $gray;
 							&:hover {
 								@include transition(all 0.25s);
-								border-bottom: 5px solid $dark-blue;
+								color: $blue;
 							}
 						} // a							
 					} // li
@@ -89,6 +89,14 @@ header {
 		} // header-container
 	} // > breakpoint $small
 } // header
+
+
+.main-container {
+	@include container;
+	max-width: $max-width;
+	padding: 0 $grid-padding;
+	margin-top: 30px;
+}
 
 // Jumbo ---------------------------
 
@@ -109,7 +117,7 @@ header {
 		
 	  	} // jumbo-marketing
 
-	  	h1 { font-weight: 300; color: $blue;}
+	  	h1 {  color: $blue;}
 
   		img {
   			position: absolute;
@@ -136,7 +144,7 @@ header {
 			.jumbo-marketing {
 				padding-top: 50px;
 				@include span(6);
-				h1 { font-weight: 300;}
+				h1 { padding-left: 25%;}
 
 			} // jumbo-marketing
 		
@@ -309,4 +317,58 @@ header {
 
 .travel {
 	border-top: 5px solid $light-blue;
+}
+
+// FAQ ------------------------------------------
+.faq-header {
+	margin: 30px 0 70px 0;
+	h2 {
+		padding: 10px 0;
+		border-bottom: 1px solid $light-gray;
+	}
+} // .faq-header
+#left-menu {
+	@include span(3);
+	background: $blue;
+	padding: 0;
+	@include box-shadow($shadow-color 5px 5px 25px);
+	@include border-radius(3px);
+	
+	ul {
+		li {
+			padding: 10px 2em;
+			border-top: 1px solid $light-blue;
+			border-bottom: 1px solid darken($blue, 15%);
+			a {
+				color: $pale-blue;
+			} // a
+			&:hover {
+				background-color: $dark-blue;
+				border-top: 1px solid darken($blue, 30%);
+				@include transition(all 0.25s);
+			}
+		} // li
+	} // ul
+} // .left-menu
+
+#answer-set {
+	@include span(8);
+	@include omega;
+
+	.answers {
+		margin-bottom: 50px;
+
+		h3 {
+			margin-bottom: 20px;
+			color: lighten($red, 10%);
+		}
+
+		.faq-item {
+			margin-bottom: 40px ;
+
+			p {
+				margin-top: 0;
+			}
+		} // .faq-item
+	} // .answers
 }

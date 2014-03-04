@@ -46,7 +46,7 @@ h6 { font-size: .49rem; }
 
 
 @include breakpoint($small) {
-	h1 { font-size: 3.0rem; }
+	h1 { font-size: 4.0rem; }
 	h2 { font-size: 2.5rem; }
 	h3 { font-size: 2.0rem; }
 	h4 { font-size: 1.5rem; }
@@ -55,10 +55,7 @@ h6 { font-size: .49rem; }
 	a  { font-size: 1.2rem;}
 }
 
-
-
 header, footer {clear: both;}
-
 
 a.learn-more {
 	display: inline-block;
