@@ -5,6 +5,7 @@
   <title>Medical Travel</title>
   <link rel="stylesheet" href="stylesheets/styles.css">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
 </head>
 <body>
   
@@ -45,13 +46,12 @@
 			<li><a href="accomodation.html">Accomodation</a></li>
 			<li><a href="clinic.html">Clinic</a></li>
 			<li><a href="warsaw.html".html>Warsaw</a></li>
-			<li><a href="follow.html">Follow up</a></li>
 			<li><a href="aftercare.html">Aftercare</a></li>
 		</ul>
 	</aside>
 	<div id="answer-set">
 		<section id="faq-getting-started" class="answers">
-			<h3>Where to start.</h3>
+			<h3 id="hide-text">Where to start.</h3>
 			<section class="faq-item">
 				<h4 class="faq-question">How to start?</h4>
 				<p class="faq-answer">
@@ -106,7 +106,21 @@
 	</div>
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/faq.js"></script>
+<script type="text/javascript">
+	
+ 	$(document).ready(function(e){
+ 		var $menu = $("#left-menu");
+
+ 		$menu.find('a').on('click', function(e){
+ 			e.preventDefault();
+
+ 			$("#answer-set").load("faq/planning.html");
+
+ 		});
+
+ 	});
+</script>
 </body>
 </html>
