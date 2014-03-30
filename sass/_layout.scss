@@ -22,17 +22,30 @@ header {
 	.header-container {
 		text-align: center;
 
-		.branding {
+		.branding-wrapper {
 
-			margin: 10px auto;
-			
-			h2 {
-				color: $blue;
-				span { color:  $light-gray;}
+			.branding {
+				margin: 0 auto;
+				padding: 20px 0;
+				
+				h2 {
+					color: $blue;
+					margin-bottom: 10px;
+					span { color:  $light-gray;}
+				}
+
+				h6 {color: $dark-gray;}
+			} // branding
+		} // .branding-wrapper
+
+		.branding-dark {
+			background: black;
+			.branding{
+				a {
+					h6 {color:white;}
+				}
 			}
-			h6 {color: $dark-gray;}
-		} // branding
-
+		}
 		.navbar {
 			li {
 				padding: 0 5%;
@@ -56,27 +69,33 @@ header {
 
 	@include breakpoint($small) {
 		.header-container {
+			@include container;
 			text-align: left;
-			padding: 0 $grid-padding;
+			
+			.branding-wrapper { 
+				padding: 0 2*gutter();
+				width: 100%;
+			
+				.branding {
+					max-width: $max-width;
+					margin: auto;
+				}	
+			} // branding-wrapper
 
-			.branding {
-				@include container;
-				max-width: $max-width;
-			}
-			.navbar {
-				@include container;
-				max-width: $max-width;
+			.navbar-wrapper {
+				padding: 0 2*gutter();
+				width: 100%;
 				
-				.navbar-box {
+				.navbar {
+					max-width: $max-width;
+					margin: auto;
 					@include horizontal-list;
-					margin-bottom: 20px;
 
 					li { 
 						padding: 10px 40px 10px 0;
 						background: none;
 						border-bottom: none;
 						a {
-						/*	border-bottom: 5px solid $blue;*/
 							color: $gray;
 							&:hover {
 								@include transition(all 0.25s);
@@ -84,8 +103,8 @@ header {
 							}
 						} // a							
 					} // li
-				} // navbar-box
-			} // navbar
+				} // navbar
+			} // navbar-wrapper
 		} // header-container
 	} // > breakpoint $small
 } // header
@@ -93,9 +112,10 @@ header {
 
 .main-container {
 	@include container;
-	max-width: $max-width;
-	padding: 0 $grid-padding;
-	margin-top: 30px;
+	
+	@include breakpoint($small) {
+		padding: 0;
+	}
 }
 
 // Jumbo ---------------------------
@@ -159,6 +179,78 @@ header {
 } // jumbo
 
 
+.jumbo-warsaw {
+	@include background(image-url('warsaw.jpg'));
+	background-position: center;
+	@include background-size(cover);
+
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+
+	height: 700px;
+
+	.jumbo-container {
+		.jumbo-marketing {
+			@include span(12);
+
+			margin: 10% 0 0 0;
+			padding: 5% 10%;
+			background: rgba(0,0,0,0.2);
+				
+			h1 {
+				padding-left: 0;
+				color: $pale-blue;
+				font-weight: 300;
+				font-size: 2.5rem;
+			}
+
+			p { color: $pale-blue;}
+
+			@include breakpoint($medium) {
+				@include span(8);
+				h1 {font-size: 4rem;}
+			}
+		} // .jumbo-marketing
+	} // .jumbo-container
+} // .jumbo-warsaw
+
+.jumbo-clinic {
+	@include background(image-url('clinic.jpg'));
+	background-position: center;
+	@include background-size(cover);
+
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+
+	height: 700px;
+
+	.jumbo-container {
+		.jumbo-marketing {
+			@include span(12);
+
+			margin: 10% 0 0 0;
+			padding: 5% 0%;
+			background: rgba(0,0,0,0.4);
+				
+			h1 {
+				padding-left: 0;
+				color: $pale-blue;
+				font-weight: 300;
+				font-size: 2.5rem;
+			}d
+
+			p { color: $pale-blue;}
+
+			@include breakpoint($medium) {
+				@include span(8);
+				h1 {font-size: 4rem;}
+			}
+		} // .jumbo-marketing
+	} // .jumbo-container
+} // .jumbo-clinic
+
 
 // Marketing-statement ------------------------------------------
 
@@ -181,11 +273,6 @@ header {
 	h4 {
 		display: inline-block;
 		@include border-radius(2px);
-		margin: 30px auto;
-		padding: 15px 25px;
-		
-		background-color: $blue;
-		color: white;
 	}
 
 	.marketing-why {
@@ -235,7 +322,7 @@ header {
 .clinic {
 	background: $pale-blue;
 	text-align: center;
-	#{headings()} {color: $dark-blue; font-weight: bold;}
+	#{headings()} {color: $blue; font-weight: bold;}
 
 	.photo-box {
 		@include container;
@@ -272,7 +359,7 @@ header {
 		padding: 20px gutter();
 
 		text-align: center;
-		#{headings()} {color: $dark-blue;}
+		#{headings()} {color: $blue;}
 
 		.doctor {
 			margin: 35px 0;
@@ -320,41 +407,57 @@ header {
 }
 
 // FAQ ------------------------------------------
+.faq-wrapper {
+	padding: 0 2 * gutter();
+}
 .faq-header {
 	margin: 30px 0 70px 0;
+	/*padding: 0 2* gutter();*/
 	h2 {
 		padding: 10px 0;
 		border-bottom: 1px solid $light-gray;
 	}
 } // .faq-header
+
 #left-menu {
-	@include span(3);
-	background: $blue;
-	padding: 0;
-	@include box-shadow($shadow-color 5px 5px 25px);
-	@include border-radius(3px);
+	@include clearfix();
+	margin-bottom: 20px;
 	
 	ul {
+		text-align: center;
 		li {
-			padding: 10px 2em;
-			border-top: 1px solid $light-blue;
-			border-bottom: 1px solid darken($blue, 15%);
+			@include border-radius(2px);
+			background: $blue;
+			display: inline-block;
+			padding: 10px 0.7em;
+			margin-bottom: 1px;
 			a {
 				color: $pale-blue;
 			} // a
 			&:hover {
 				background-color: $dark-blue;
-				border-top: 1px solid darken($blue, 30%);
+				/*border-top: 1px solid darken($blue, 30%);*/
 				@include transition(all 0.25s);
 			}
 		} // li
 	} // ul
+
+	@include breakpoint($small) {
+		@include span(3);
+		padding: 0;
+		ul li {
+			display: block;
+			padding: 10px 0;
+			margin-bottom: 1px;
+			
+		}	
+	} 
+
+
+
 } // .left-menu
 
 #answer-set {
-	@include span(8);
-	@include omega;
-
 	.answers {
 		margin-bottom: 50px;
 
@@ -371,4 +474,148 @@ header {
 			}
 		} // .faq-item
 	} // .answers
+
+	@include breakpoint($small) {
+		@include span(8);
+		@include omega;
+		padding: 0;
+		
+	} // breakpoint > $small
+} // #answer-set
+
+
+.external-link {
+	padding-left: 10px;
 }
+.marketing-warsaw {
+	@include container;
+	padding: 50px gutter();
+	max-width: $max-width;
+
+	text-align: left;
+	img {
+		width: 100%;
+		float: left;
+		margin: 0 0 15px 0;
+		padding-left: 0;
+	} // img
+	section { 
+		@include clearfix();
+		margin-top: 40px;
+	}
+	li {
+		padding-left: 20px;
+	}
+	a {
+		line-height: 1.7rem;
+		padding-left: 10px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	i {
+		color: $light-blue;
+		padding-right: 10px;
+	}
+	p { 
+		&:first-of-type {
+			margin-bottom: 15px;
+		}
+	}
+	h2, h3 { 
+		color: $blue;
+		text-align: center;
+	}
+	h3 {
+		text-align: left;
+		margin: 50px 0 10px 0;
+	}
+	h4 {
+		color: $gray;
+	}
+	h5 {
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 0;
+		color: $gray;
+		font-weight: 300;
+	}
+
+	@include breakpoint($small) {
+
+		img {
+			width: 50%;
+			margin-right: 2*$grid-padding;
+		}
+
+	} // >$small
+} // .marketing-warsaw
+
+
+// Footer -----------------------------------
+
+.footer-container {
+	width: 100%;
+	background: $gray;
+
+	.footer-navbar {
+		@include container;
+		max-width: $max-width;
+		padding: 0 gutter();
+
+		.footer-item {
+			@include alpha(2);
+			@include span(8);
+			padding: 2rem 2rem;
+
+			border-bottom: 1px solid $light-gray;
+			ul li {
+				padding: 5px 0;
+
+				a {
+					color: $very-light-gray;
+					&:hover {
+						color: $white;
+						text-decoration: underline;
+					} // hover
+				} //a
+			} // ul li
+
+			@include breakpoint($small) {
+
+				@include span(4) {}
+
+			}
+		} // .footer-item
+	} // .footer-navbar
+
+
+	.copyright {
+		max-width: $max-width;
+		padding: 0 2* gutter();
+		h5 { 
+
+			padding: 20px 0;
+			color: $very-light-gray; 
+			font-weight: 100;
+			font-size: 0.85em;
+		}
+	}
+
+
+} // .footer-container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
